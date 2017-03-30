@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<div id="root">
+	<say-hi v-for="(name, index) in users" :name="name" :index="index + 1" :key="index"></say-hi>
+</div>
+
+<script id="say-hi" type="text/x-template">
+	<p>Hello {{index}}-{{name}}, this is from vue.js</p>
+</script>
+
+<script src="../lib/vue.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
