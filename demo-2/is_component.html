@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<div id="root">
+	<div>
+		<h2>Demo</h2>
+		<component :is="state.currentView"></component>
+	</div>
+</div>
+
+<script id="one" type="text/x-template">
+	<p>1111</p>
+</script>
+
+<script id="two" type="text/x-template">
+	<p>2222</p>
+</script>
+
+<script id="three" type="text/x-template">
+	<p>3333</p>
+</script>
+
+<script src="../lib/vue.js"></script>
+<script src="is_component.js"></script>
+</body>
+</html>
