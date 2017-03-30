@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script id="app" type="text/x-template">
+	<say-hi :who="username" message="一个常规的prop传进来了。"></say-hi>
+</script>
+
+<script id="say-hi" type="text/x-template">
+	<p>Hello {{who}}, {{message}}</p>
+</script>
+
+<script src="../lib/vue.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
