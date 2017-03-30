@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<div id="root">
+	<message-from></message-from>
+
+	<hr>
+	<h3>Out</h3>
+	<message-to></message-to>
+
+	<hr>
+	<h3>Out</h3>
+	<h5>To use a outer obj bypass data, may cause a copy.</h5>
+	<message-to></message-to>
+</div>
+
+<script id="message-from" type="text/x-template">
+	<p>Add a user: <input v-model="user"></p>
+</script>
+
+<script id="message-to" type="text/x-template">
+	<div>
+		<p>Users:</p>
+		<ul>
+			<li v-for="who in users">{{who}}</li>
+		</ul>
+	</div>
+</script>
+
+<script src="../lib/vue.js"></script>
+<script src="../lib/lodash.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
