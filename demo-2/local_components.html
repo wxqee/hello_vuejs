@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<div id="root">
+	<div class="try-to-define-a-new-template">
+		<div id="four">
+			<p>This is a normal html template.</p>
+		</div>
+	</div>
+</div>
+
+<script id="app" type="text/x-template">
+	<div>
+		<one user="robin"></one>
+		<two></two>
+		<three></three>
+		<four></four>
+	</div>
+</script>
+
+<script id="one" type="text/x-template">
+	<p>{{user}} in one</p>
+</script>
+
+<script id="two" type="text/x-template">
+	<p>{{foo}} in two</p>
+</script>
+
+<script id="three" type="text/x-template">
+	<p>{{dateTime}} in three</p>
+</script>
+
+<script src="../lib/vue.js"></script>
+<script src="local_components.js"></script>
+</body>
+</html>
