@@ -15,8 +15,12 @@ Vue.component('message-list', {
     pushMessage: function (newMessage) {
       this.messages.push(newMessage);
     },
-    clearMessages: function () {
-      this.messages = [];
+    clearMessages: function (timeout) {
+      timeout = timeout || 0;
+
+      setTimeout(function () {
+        this.messages = [];
+      }, timeout);
     }
   }
 });
@@ -48,12 +52,12 @@ var app = new Vue({
     var it = setInterval(function() {
       messageList.pushMessage(data[index++]);
 
-      if (index == 3) {
-        messageList.clearMessages();
-        console.log(messageList.messages);
+      if (index == 5) {
+        // try to clear messages after 5 seconds
+        messageList.clearMessages(5000);
         clearInterval(it);
       }
-    }, 2000)
+    }, 800);
 
   }
 });

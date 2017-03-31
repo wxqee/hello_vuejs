@@ -24,17 +24,35 @@
 <script type="text/x-template" id="message-item-tpl">
 	<transition name="fade">
 		<div class="message-item" v-if="show">
-			{{text}}
+			<span class="message-list__item-text">{{text}}</span>
 		</div>
 	</transition>
 </script>
 
 <style>
 	.message-list {
-
+		position: fixed;
+		right: 38px;
+		bottom: 38px;
 	}
 
 	.message-list .message-item {
+		background: #454b6a;
+		width: 282px;
+		height: 49px;
+		padding: 16px 15px 15px 78px;
+		line-height: 49px;
+
+		margin-top: 24px;
+	}
+
+	.message-list .message-list__item-text {
+		opacity: 0.6;
+		font-family: PingFangSC-Semibold, Arial;
+		font-size: 13px;
+		color: #ffffff;
+		letter-spacing: 0;
+		text-align: left;
 	}
 
 	.message-list .fade-enter-active, .message-list .fade-leave-active {
