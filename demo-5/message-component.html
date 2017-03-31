@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<div id="root">
+	<message-list ref="messageList"></message-list>
+</div>
+
+<script type="text/x-template" id="message-list-tpl">
+	<div class="message-list">
+		<message-item
+				:text="text"
+				:key="index"
+				:index="index"
+				v-for="(text, index) in messages"
+		></message-item>
+	</div>
+</script>
+
+<script type="text/x-template" id="message-item-tpl">
+	<transition name="fade">
+		<div class="message-item" v-if="show">
+			{{text}}
+		</div>
+	</transition>
+</script>
+
+<style>
+	.message-list {
+
+	}
+
+	.message-list .message-item {
+	}
+
+	.message-list .fade-enter-active, .message-list .fade-leave-active {
+		transition: opacity 1s
+	}
+
+	.message-list .fade-enter, .message-list .fade-leave-active {
+		opacity: 0
+	}
+	Toggle
+
+</style>
+
+<script src="../lib/vue.js"></script>
+<script src="message-component.js"></script>
+</body>
+</html>
